@@ -1,5 +1,5 @@
 <div class="small-12 columns">
-  <h1>'Allo, 'Allo!</h1>
+  <h1>Hello Osama!</h1>
   <p class="lead">
     <img src="images/yeoman.png" alt="I'm Yeoman"><br>
     Always a pleasure scaffolding your apps.
@@ -13,6 +13,7 @@
     HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
   </p>
 
+  <p> <paper-button raisedButton onclick="document.querySelector('#toast2').show()" label="Get Messages"></paper-button></p>
   <h4>Angular</h4>
   <p>
     AngularJS is a toolset for building the framework most suited to your application development.
@@ -20,4 +21,8 @@
 
   <h4>Karma</h4>
   <p>Spectacular Test Runner for JavaScript.</p>
+
+  <paper-toast id="toast2" role="alert" text="Connection timed out. Showing limited messages.">
+    <div style="color: #eeff41;" onclick="console.log('RETRY')">Retry</div>
+  </paper-toast>
 </div>
