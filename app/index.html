@@ -5,12 +5,12 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <base href="/">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <script src="elements/platform/platform.js"></script>
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
-    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -18,6 +18,7 @@
     <!-- endbuild -->
     <link rel="import" href="elements/paper-button/paper-button.html">
     <link rel="import" href="elements/paper-toast/paper-toast.html">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
   <body ng-app="remedialChaosTheoryApp">
     <!--[if lt IE 7]>
@@ -25,43 +26,8 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="off-canvas-wrap" data-offcanvas>
-      <div class="inner-wrap">
-        <nav class="tab-bar">
-          <section class="left-small">
-            <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
-          </section>
-
-          <section class="right tab-bar-section">
-            <div class="text-right"><i class="fa fa-user"></i> User Name</div>
-          </section>
-        </nav>
-
-        <aside class="left-off-canvas-menu">
-          <ul class="off-canvas-list">
-            <li><label><i class="fa fa-cog"></i> Menu</label></li>
-            <li><a href="#">The Psychohistorians</a></li>
-            <li><a href="#">...</a></li>
-            <li><label><i class="fa fa-cog"></i> Settings</label></li>
-          </ul>
-        </aside>
-
-        <div class="row">
-          <section class="main-section">
 
             <div ng-view=""></div>
-          </section>
-        </div>
-        <div class="footer">
-          <div class="small-12 columns">
-            <p class="text-center"><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-          </div>
-        </div>
-
-        <a class="exit-off-canvas"></a>
-      </div>
-    </div>
-
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -94,7 +60,7 @@
     <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
     <script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
     <script src="bower_components/fastclick/lib/fastclick.js"></script>
-    <script src="bower_components/foundation/js/foundation.js"></script>
+    <script src="bower_components/angular-foundation/mm-foundation-tpls.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -102,9 +68,7 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/login.js"></script>
     <!-- endbuild -->
-    <script>
-      $(document).foundation();
-    </script>
   </body>
 </html>

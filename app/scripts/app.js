@@ -15,10 +15,18 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'mm.foundation'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
+
+    $locationProvider.html5Mode(true);
+
     $routeProvider
+      .when('/login', {
+        templateUrl: 'login.html',
+        controller: 'LoginCtrl'
+      })
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
@@ -28,6 +36,6 @@ angular
         controller: 'AboutCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/login'
       });
   });
