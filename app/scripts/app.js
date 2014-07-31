@@ -20,7 +20,7 @@ angular
   ])
   .config(function ($routeProvider, $locationProvider) {
 
-    $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(false);
 
     $routeProvider
       .when('/login', {
@@ -31,9 +31,21 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/history', {
+        templateUrl: 'views/history.html',
+        controller: 'HistoryCtrl'
+      })
+      .when('/news', {
+        templateUrl: 'views/news.html',
+        controller: 'NewsCtrl'
+      })
+      .when('/careteam', {
+        templateUrl: 'views/careteam.html',
+        controller: 'CareteamCtrl'
+      })
+      .when('/profile', {
+        templateUrl: 'views/profile.html',
+        controller: 'ProfileCtrl'
       })
       .otherwise({
         redirectTo: '/login'

@@ -33,6 +33,7 @@
 
 #shadow-container {
   border-radius: inherit;
+  position: absolute !important;
 }
 
 #clip {

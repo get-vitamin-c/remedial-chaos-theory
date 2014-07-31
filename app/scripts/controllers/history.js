@@ -2,19 +2,16 @@
 
 /**
  * @ngdoc function
- * @name remedialChaosTheoryApp.controller:LoginCtrl
+ * @name remedialChaosTheoryApp.controller:MainCtrl
  * @description
- * # LoginCtrl
+ * # MainCtrl
  * Controller of the remedialChaosTheoryApp
  */
 angular.module('remedialChaosTheoryApp')
-  .controller('LoginCtrl', function ($scope, $location) {
+  .controller('HistoryCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-    $scope.go = function (path) {
-      $location.path(path);
-    };
   });

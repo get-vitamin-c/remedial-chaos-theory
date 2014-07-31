@@ -6,16 +6,19 @@
       </section>
 
       <section class="right tab-bar-section">
-        <div class="text-right"><i class="fa fa-user"></i> User Name</div>
+        <vc-nav user="Laurel Nason"></vc-nav>
       </section>
     </nav>
 
     <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
         <li><label><i class="fa fa-cog"></i> Menu</label></li>
-        <li><a href="#">The Psychohistorians</a></li>
-        <li><a href="about">About</a></li>
+        <li><a href="#/">Dashboard</a></li>
+        <li><a href="#/history">History</a></li>
+        <li><a href="#/news">News</a></li>
+        <li><a href="#/careteam">Careteam</a></li>
         <li><label><i class="fa fa-cog"></i> Settings</label></li>
+        <li><a href="#/profile">Edit Profile</a></li>
       </ul>
     </aside>
     <a class="exit-off-canvas"></a>
@@ -23,33 +26,25 @@
     <div class="row">
       <section class="main-section">
         <div class="small-12 columns">
-  <h1>Hello Osama!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
-
-<div class="small-12 columns marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <p> <paper-button raisedButton onclick="document.querySelector('#toast2').show()" label="Get Messages"></paper-button></p>
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-
-  <paper-toast id="toast2" role="alert" text="Connection timed out. Showing limited messages.">
-    <div style="color: #eeff41;" onclick="console.log('RETRY')">Retry</div>
-  </paper-toast>
-</div>
+          <h1>Vitamin <img src="/images/logo-big.png"></h1>
+          <h2 class="section-head">
+            Today
+            <div class="pull-right">8/5/14</div>
+          </h2>
+          <ul>
+            <li class="small-12 columns"><h3>Complete User Profile</h3><div class="pull-right"><paper-button raisedButton onclick="document.querySelector('#toast2').show()" label="Complete Objective"></paper-button></div></li>
+            <li class="small-12 columns"><h3>Epworth Sleepiness Survey</h3><div class="pull-right"><paper-button raisedButton onclick="document.querySelector('#toast2').show()" label="Take Survey"></paper-button></div></li>
+            <li class="small-12 columns"><h3>Record Blood Glucose</h3><div class="pull-right"><paper-button raisedButton onclick="document.querySelector('#toast2').show()" label="Record Blood Glucose"></paper-button></div></li>
+          </ul>
+        </div>
+        <div class="small-12 columns">
+          <h2 class="section-head">
+            Upcoming
+            <div class="pull-right">8/6/14 - 8/20/14</div>
+          </h2>
+          <ul>
+            <li class="small-12 columns"><h3>30 Day CPAP Check In</h3><div class="pull-right"><paper-button raisedButton onclick="document.querySelector('#toast2').show()" label="Be Prepared"></paper-button></div></li>
+          </ul>
         </div>
       </section>
     </div>
@@ -58,6 +53,8 @@
         <p class="text-center"><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
       </div>
     </div>
-
   </div>
 </div>
+<paper-toast id="toast2" role="alert" text="Connection timed out. Showing limited messages.">
+  <div style="color: #eeff41;" onclick="console.log('RETRY')">Retry</div>
+</paper-toast>

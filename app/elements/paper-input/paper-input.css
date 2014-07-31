@@ -36,13 +36,25 @@
   width: 100%;
 }
 
+:host-context(.login__form) {
+  width: 240px;
+  max-width: 240px;
+}
+
+@media screen and (min-width: 480px) {
+  :host-context(.login__form) {
+    width: 340px;
+    max-width: 340px;
+  }
+}
+
 .host /deep/ textarea {
   resize: none;
 }
 
 .focusedColor {
-  color: #4059a9;
-  background: #4059a9;
+  color: #368ee0;
+  background: #368ee0;
 }
 
 :host(.invalid) #underline,
