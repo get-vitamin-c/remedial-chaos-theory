@@ -1,13 +1,21 @@
 <link rel="import" href="../polymer/polymer.html">
-<polymer-element name="vc-nav" attributes="user">
+<polymer-element name="vc-nav" attributes="user, avatar">
   <template>
+    <style type="text/css">
+      .avatar{
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        margin-right: .5em;
+      }
+    </style>
     <link rel="stylesheet" href="/elements/foundation/css/foundation.css" />
-    <div class="text-right"><img src="{{avatar}}" alt="{{user}}" width="50px" height="50px"> {{user}}</div>
+    <div class="text-right"><img src="{{avatar}}" alt="{{user}}" width="30px" height="30px" class="avatar"> {{user}}</div>
   </template>
   <script>
     Polymer('vc-nav', {
       user: 'Jordan Burke',
-      avatar: "http://localhost:9000/images/yeoman.png"
+      avatar: "/images/yeoman.png"
     });
   </script>
 </polymer-element>

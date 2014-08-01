@@ -16,9 +16,10 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'mm.foundation'
+    'mm.foundation',
+    'ngQuickDate'
   ])
-  .config(function ($routeProvider, $locationProvider) {
+  .config(function ($routeProvider, $locationProvider, ngQuickDateDefaultsProvider) {
 
     $locationProvider.html5Mode(false);
 
@@ -35,6 +36,10 @@ angular
         templateUrl: 'views/history.html',
         controller: 'HistoryCtrl'
       })
+      .when('/tracktion', {
+        templateUrl: 'views/tracktion.html',
+        controller: 'TracktionCtrl'
+      })
       .when('/news', {
         templateUrl: 'views/news.html',
         controller: 'NewsCtrl'
@@ -49,5 +54,18 @@ angular
       })
       .otherwise({
         redirectTo: '/login'
+      });
+
+      // Configure with icons from font-awesome
+      return ngQuickDateDefaultsProvider.set({
+        closeButtonHtml: "<i class='fa fa-times'></i>",
+        buttonIconHtml: "<i class='fa fa-clock-o'></i>",
+        nextLinkHtml: "<i class='fa fa-chevron-right'></i>",
+        prevLinkHtml: "<i class='fa fa-chevron-left'></i>",
+        // Take advantage of Sugar.js date parsing
+        parseDateFunction: function(str) {
+          var d = Date.create(str);
+          return d.isValid() ? d : null;
+        }
       });
   });

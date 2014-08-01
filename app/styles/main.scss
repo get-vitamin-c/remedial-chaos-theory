@@ -12,6 +12,12 @@
 /* Space out content a bit */
 body {
   font-family: 'Open Sans';
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.row {
+  background: #fff;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -19,17 +25,39 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .section-head {
-  background: #1a1617;
+  background: #368ee0;
   color: #fff;
   padding: 0 1em;
 }
+
 h1 img {
   margin-right: 20px;
   margin-top: -15px;
 }
 
+.avatar{
+  border-radius: 50%;
+}
+
+.todos {
+  list-style-type: none;
+  margin-left: 0;
+}
+.todos paper-checkbox {
+  margin-right: 1rem;
+}
+.input{
+  margin: 1em 0;
+}
+paper-input {
+  width:100%;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
+  body {
+    background: url('/images/app-bg.jpg') fixed no-repeat center center;
+  }
   .section-head {
     padding: 0 3em;
   }

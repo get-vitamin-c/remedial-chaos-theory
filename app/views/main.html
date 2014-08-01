@@ -6,7 +6,7 @@
       </section>
 
       <section class="right tab-bar-section">
-        <vc-nav user="Laurel Nason"></vc-nav>
+        <vc-nav user="Jordan Burke" avatar="/images/avatars/BurtMacklin.jpg"></vc-nav>
       </section>
     </nav>
 
@@ -23,7 +23,7 @@
     </aside>
     <a class="exit-off-canvas"></a>
 
-    <div class="row">
+    <div class="row site-wrapper">
       <section class="main-section">
         <div class="small-12 columns">
           <h1>Vitamin <img src="/images/logo-big.png"></h1>
@@ -31,10 +31,10 @@
             Today
             <div class="pull-right">8/5/14</div>
           </h2>
-          <ul>
-            <li class="small-12 columns"><h3>Complete User Profile</h3><div class="pull-right"><paper-button raisedButton onclick="document.querySelector('#toast2').show()" label="Complete Objective"></paper-button></div></li>
-            <li class="small-12 columns"><h3>Epworth Sleepiness Survey</h3><div class="pull-right"><paper-button raisedButton onclick="document.querySelector('#toast2').show()" label="Take Survey"></paper-button></div></li>
-            <li class="small-12 columns"><h3>Record Blood Glucose</h3><div class="pull-right"><paper-button raisedButton onclick="document.querySelector('#toast2').show()" label="Record Blood Glucose"></paper-button></div></li>
+          <ul class="todos">
+            <li class="small-12 columns"><h3><paper-checkbox checked></paper-checkbox>Complete User Profile</h3><div class="pull-right"><paper-button raisedButton onclick="document.querySelector('#toast2').show()" label="Complete Objective"></paper-button></div></li>
+            <li class="small-12 columns"><h3><paper-checkbox></paper-checkbox>Epworth Sleepiness Survey</h3><div class="pull-right"><paper-button raisedButton onclick="document.querySelector('#toast2').show()" label="Take Survey"></paper-button></div></li>
+            <li class="small-12 columns"><h3><paper-checkbox checked></paper-checkbox>Record Blood Glucose</h3><div class="pull-right"><paper-button raisedButton onclick="document.querySelector('#toast2').show()" label="Record Blood Glucose"></paper-button></div></li>
           </ul>
         </div>
         <div class="small-12 columns">
@@ -42,15 +42,16 @@
             Upcoming
             <div class="pull-right">8/6/14 - 8/20/14</div>
           </h2>
-          <ul>
+          <ul class="todos">
             <li class="small-12 columns"><h3>30 Day CPAP Check In</h3><div class="pull-right"><paper-button raisedButton onclick="document.querySelector('#toast2').show()" label="Be Prepared"></paper-button></div></li>
+            <li class="small-12 columns"><h3>Record Blood Glucose</h3><div class="pull-right"><paper-button raisedButton onclick="document.querySelector('#toast2').show()" label="Record Blood Glucose"></paper-button></div></li>
           </ul>
         </div>
       </section>
     </div>
     <div class="footer">
       <div class="small-12 columns">
-        <p class="text-center"><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <p>Copyright 2013-2014 Vitamin C</p>
       </div>
     </div>
   </div>
