@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'mm.foundation',
-    'ngQuickDate'
+    'ngQuickDate',
+    'ng-polymer-elements'
   ])
   .config(function ($routeProvider, $locationProvider, ngQuickDateDefaultsProvider) {
 
