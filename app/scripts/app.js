@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'mm.foundation'
+    'mm.foundation',
+    'ng-polymer-elements'
   ])
   .config(function ($routeProvider, $locationProvider) {
 

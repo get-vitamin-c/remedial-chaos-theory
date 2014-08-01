@@ -5,8 +5,8 @@
     <div class="login-body">
       <form class="login__form" action="">
         <h2>SIGN IN {{testString}}</h2>
-        <input floatinglabel label="Email" type="text" ng-model="user.username"></paper-input>
-        <input floatinglabel label="Password" type="password" ng-model="user.password"></paper-input>
+        <paper-input floatinglabel label="Email" type="text" ng-model="user.username"></paper-input>
+        <paper-input floatinglabel label="Password" type="password" ng-model="user.password"></paper-input>
         <div class="pull-right">
           <paper-button class="colored" label="Sign In" onclick="console.log('clicked!')" raisedButton ng-click="doOAuth(user, '/')"></paper-button>
         </div>
