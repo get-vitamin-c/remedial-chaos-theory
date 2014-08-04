@@ -32,7 +32,9 @@
 
     <!-- Add your site to application content here -->
 
-            <div ng-view=""></div>
+    <div ng-view=""></div>
+
+    <paper-toast id="basic-toast"></paper-toast>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -83,8 +85,12 @@
     <script src="scripts/controllers/profile.js"></script>
     <script src="elements/ng-polymer-elements/ng-polymer-elements.js"></script>
     <!-- endbuild -->
+
+    <script src="scripts/authenticate.js"></script>
+
     <script>
       $(document).foundation();
     </script>
+
   </body>
 </html>

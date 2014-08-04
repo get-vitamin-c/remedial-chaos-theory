@@ -9,6 +9,9 @@
  */
 angular.module('remedialChaosTheoryApp')
   .controller('MainCtrl', function ($scope) {
+
+  	authenticate();
+  	
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
