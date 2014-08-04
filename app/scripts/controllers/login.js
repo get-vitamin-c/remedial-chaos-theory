@@ -22,8 +22,8 @@ angular.module('remedialChaosTheoryApp')
 
     $scope.doOAuth = function(user, path)
     {
-      var clientId = '49ce6a8ea752fac503a326890fce62656601f7d200020c1a26d6706fe303c06d';
-      var clientSecret = '1986737081d88612da3b454bb0779fe6fa39990b9b88ee3307e1cfa9b82ea178';
+      var clientId = 'a5b25aceb6220a30e703f6751f3defaed9119d8a368e67f33fe51f07fb187014';
+      var clientSecret = 'b0dd1e71178bae20960caffbafa7bed09cd9ba662c03e6e2412eefb73b580d6c';
       $http.post('http://localhost:3000/oauth/token?grant_type=password&client_id=' + clientId + '&client_secret=' + clientSecret + '&username=' + user.username + '&password=' + user.password).success(function(data, status, headers, config) {
             console.log('Good - ' + status);
             $scope.accessToken = sessionStorage.accessToken = data.access_token;
