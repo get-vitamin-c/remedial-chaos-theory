@@ -59,6 +59,10 @@
   color: #fff;
 }
 
+.login .navigation, .login label[for="nav-trigger"]{
+  display:none;
+}
+
 @media screen and (min-width: 480px) {
   .login .wrapper {
     width: 400px;
