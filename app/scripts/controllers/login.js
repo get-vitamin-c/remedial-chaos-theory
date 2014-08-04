@@ -8,7 +8,7 @@
  * Controller of the remedialChaosTheoryApp
  */
 angular.module('remedialChaosTheoryApp')
-  .controller('LoginCtrl', function ($scope, $location, $http) {
+  .controller('LoginCtrl', function ($scope, $location, $route, $http) {
 
     authenticate();
 
@@ -28,8 +28,10 @@ angular.module('remedialChaosTheoryApp')
             console.log('Good - ' + status);
             $scope.accessToken = sessionStorage.accessToken = data.access_token;
             $location.path(path);
+            jQuery('body').removeClass('login');
         }).error (function(data, status, headers, config) {
             console.log('Error - ' + status);
+            jQuery('body').addClass('login');
             if (status == 401)
             {
               document.querySelector('#basic-toast').text = "Invalid Username or Password! Try Again.";

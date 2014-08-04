@@ -69,4 +69,14 @@
     }
   });
 
+  $scope.$on("$routeChangeSuccess", function($currentRoute, $previousRoute) {
+    if ($currentRoute.path == '/login') {
+      jQuery('body').addClass('login');
+      console.log("login");
+    } else {
+      jQuery('body').removeClass('login');
+      console.log("no login");
+    }
+  });
+
 });

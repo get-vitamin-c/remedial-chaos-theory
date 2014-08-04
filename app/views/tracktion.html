@@ -1,60 +1,33 @@
-<div class="off-canvas-wrap" data-offcanvas>
-  <div class="inner-wrap">
-    <nav class="tab-bar">
-      <section class="left-small">
-        <a class="left-off-canvas-toggle menu-icon"><span></span></a>
-      </section>
-
-      <section class="right tab-bar-section">
-        <vc-nav user="Jordan Burke" avatar="/images/avatars/BurtMacklin.jpg"></vc-nav>
-      </section>
-    </nav>
-
-    <aside class="left-off-canvas-menu">
-      <ul class="off-canvas-list">
-        <li><label><i class="fa fa-cog"></i> Menu</label></li>
-        <li><a href="#/">Dashboard</a></li>
-        <li><a href="#/history">History</a></li>
-        <li><a href="#/news">News</a></li>
-        <li><a href="#/careteam">Careteam</a></li>
-        <li><label><i class="fa fa-cog"></i> Settings</label></li>
-        <li><a href="#/profile">Edit Profile</a></li>
-      </ul>
-    </aside>
-    <a class="exit-off-canvas"></a>
-
-    <div class="row">
-      <section class="main-section">
+<div class="row">
+  <section class="main-section">
+    <div class="small-12 columns">
+      <h1 class="logo text-center">Vitamin <img src="/images/logo-big.png"></h1>
+      <h2 class="section-head">
+        Record Blood Glucose
+      </h2>
+      <div>
         <div class="small-12 columns">
-          <h1 class="logo text-center">Vitamin <img src="/images/logo-big.png"></h1>
-          <h2 class="section-head">
-            Record Blood Glucose
-          </h2>
-          <div>
-            <div class="small-12 columns">
-              <h4>Record Date</h4>
-              <quick-datepicker ng-model='myDate'></quick-datepicker>
-            </div>
-            <div class="input small-12 columns">
-              <label>mg/dL</label>
-              <paper-input type="number" error="Input is not a number!"></paper-input>
-            </div>
-            <p class="pull-right"><paper-button raisedButton ng-click="go('/')" label="Record!"></paper-button></p>
-            <h5>Previous record: 124 mg/dL submitted on 08/04/2014 at 7:19pm EDT</h5>
-            <p><a href="#">View your history</a></p>
-            <hr>
-            <h4>Resources</h4>
-            <p>Have questions about this tracktion? Here are some resources that can help you better understand how and why you're tracking your blood glucose:</p>
-            <ul>
-              <li><a href="#">Resource 1</a>: Short description about resource</li>
-              <li><a href="#">Resource 2</a>: Short description about resource</li>
-              <li><a href="#">Resource 3</a>: Short description about resource</li>
-              <li><a href="#">Resource 4</a>: Short description about resource</li>
-            </ul>
-            <p>Still have a question? <a href="#">Message your careteam</a> and find out more.</p>
-          </div>
+          <h4>Record Date</h4>
+          <quick-datepicker ng-model='myDate'></quick-datepicker>
         </div>
-      </section>
+        <div class="input small-12 columns">
+          <label>mg/dL</label>
+          <paper-input type="number" error="Input is not a number!"></paper-input>
+        </div>
+        <p class="pull-right"><paper-button raisedButton ng-click="go('/')" label="Record!"></paper-button></p>
+        <h5>Previous record: 124 mg/dL submitted on 08/04/2014 at 7:19pm EDT</h5>
+        <p><a href="#">View your history</a></p>
+        <hr>
+        <h4>Resources</h4>
+        <p>Have questions about this tracktion? Here are some resources that can help you better understand how and why you're tracking your blood glucose:</p>
+        <ul>
+          <li><a href="#">Resource 1</a>: Short description about resource</li>
+          <li><a href="#">Resource 2</a>: Short description about resource</li>
+          <li><a href="#">Resource 3</a>: Short description about resource</li>
+          <li><a href="#">Resource 4</a>: Short description about resource</li>
+        </ul>
+        <p>Still have a question? <a href="#">Message your careteam</a> and find out more.</p>
+      </div>
     </div>
-  </div>
+  </section>
 </div>
