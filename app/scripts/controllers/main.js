@@ -8,10 +8,8 @@
  * Controller of the remedialChaosTheoryApp
  */
 angular.module('remedialChaosTheoryApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, $location) {
+    $scope.go = function (path) {
+      $location.path(path);
+    };
   });

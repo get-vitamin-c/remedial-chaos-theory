@@ -9,11 +9,6 @@
  */
 angular.module('remedialChaosTheoryApp')
   .controller('LoginCtrl', function ($scope, $location, $http) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
 
     $scope.accessToken = '';
 
