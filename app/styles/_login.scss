@@ -6,7 +6,7 @@
   .wrapper {
     width: 300px;
     height: 500px;
-    margin: -200px -150px;
+    margin: -200px -150px 400px;
     position: absolute;
     left: 50%;
     top: 40%;
@@ -62,6 +62,6 @@
 @media screen and (min-width: 480px) {
   .login .wrapper {
     width: 400px;
-    margin: -200px -200px;
+    margin: -200px -200px 400px;
   }
 }

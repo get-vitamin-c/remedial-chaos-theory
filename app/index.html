@@ -1,51 +1,68 @@
 <!doctype html>
 <html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <title>Vitamin C</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <base href="/">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <script src="elements/platform/platform.js"></script>
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
-    <link rel="stylesheet" href="bower_components/ngQuickDate/dist/ng-quick-date.css" />
-    <link rel="stylesheet" href="bower_components/ngQuickDate/dist/ng-quick-date-default-theme.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-    <link rel="import" href="/elements/paper-button/paper-button.html">
-    <link rel="import" href="/elements/paper-toast/paper-toast.html">
-    <link rel="import" href="/elements/paper-checkbox/paper-checkbox.html">
-    <link rel="import" href="/elements/vc-nav/vc-nav.html">
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:400,300' rel='stylesheet' type='text/css'>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  </head>
-  <body ng-app="remedialChaosTheoryApp">
+<head>
+  <meta charset="utf-8">
+  <title>Vitamin C</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <base href="/">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <script src="elements/platform/platform.js"></script>
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
+  <link rel="stylesheet" href="bower_components/ngQuickDate/dist/ng-quick-date.css" />
+  <link rel="stylesheet" href="bower_components/ngQuickDate/dist/ng-quick-date-default-theme.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  <link rel="import" href="/elements/paper-button/paper-button.html">
+  <link rel="import" href="/elements/paper-toast/paper-toast.html">
+  <link rel="import" href="/elements/paper-checkbox/paper-checkbox.html">
+  <link rel="import" href="/elements/vc-nav/vc-nav.html">
+  <link rel="import" href="/elements/nav-drawer/nav-drawer.html">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body ng-app="remedialChaosTheoryApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+      <![endif]-->
 
-    <!-- Add your site to application content here -->
-
+      <ul class="navigation">
+          <li class="nav-item"><a href="/#/">Home</a></li>
+          <li class="nav-item"><a href="/#/">Portfolio</a></li>
+          <li class="nav-item"><a href="/#/">About</a></li>
+          <li class="nav-item"><a href="/#/">Blog</a></li>
+          <li class="nav-item"><a href="/#/">Contact</a></li>
+      </ul>
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger"><span>Menu</span></label>
+      <div class="site-wrap">
+          <div ng-view=""></div>
+      </div>
+      <div class="footer text-center">
+          <div class="small-12 columns">
+            <p>Copyright 2013-2014 Vitamin C</p>
+        </div>
+    </div>
+    
     <div ng-view=""></div>
 
     <paper-toast id="basic-toast"></paper-toast>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
+     ga('create', 'UA-XXXXX-X');
+     ga('send', 'pageview');
+     </script>
 
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
@@ -76,7 +93,6 @@
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/about.js"></script>
     <script src="scripts/controllers/login.js"></script>
     <script src="scripts/controllers/history.js"></script>
     <script src="scripts/controllers/tracktion.js"></script>
@@ -89,8 +105,8 @@
     <script src="scripts/authenticate.js"></script>
 
     <script>
-      $(document).foundation();
+    $(document).foundation();
     </script>
 
-  </body>
+</body>
 </html>

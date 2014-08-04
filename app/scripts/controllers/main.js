@@ -8,7 +8,7 @@
  * Controller of the remedialChaosTheoryApp
  */
 angular.module('remedialChaosTheoryApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, $location) {
 
   	authenticate();
   	
@@ -17,4 +17,9 @@ angular.module('remedialChaosTheoryApp')
       'AngularJS',
       'Karma'
     ];
+    
+    $scope.go = function (path) {
+      $location.path(path);
+    };
+
   });

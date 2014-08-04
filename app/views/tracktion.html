@@ -1,4 +1,3 @@
-<link rel="import" href="/elements/paper-input/paper-input.html">
 <div class="off-canvas-wrap" data-offcanvas>
   <div class="inner-wrap">
     <nav class="tab-bar">
@@ -27,7 +26,7 @@
     <div class="row">
       <section class="main-section">
         <div class="small-12 columns">
-          <h1>Vitamin <img src="/images/logo-big.png"></h1>
+          <h1 class="logo text-center">Vitamin <img src="/images/logo-big.png"></h1>
           <h2 class="section-head">
             Record Blood Glucose
           </h2>
@@ -38,17 +37,24 @@
             </div>
             <div class="input small-12 columns">
               <label>mg/dL</label>
-              <paper-input label="mg/dL" type="number" error="Input is not a number!"></paper-input>
+              <paper-input type="number" error="Input is not a number!"></paper-input>
             </div>
             <p class="pull-right"><paper-button raisedButton ng-click="go('/')" label="Record!"></paper-button></p>
+            <h5>Previous record: 124 mg/dL submitted on 08/04/2014 at 7:19pm EDT</h5>
+            <p><a href="#">View your history</a></p>
+            <hr>
+            <h4>Resources</h4>
+            <p>Have questions about this tracktion? Here are some resources that can help you better understand how and why you're tracking your blood glucose:</p>
+            <ul>
+              <li><a href="#">Resource 1</a>: Short description about resource</li>
+              <li><a href="#">Resource 2</a>: Short description about resource</li>
+              <li><a href="#">Resource 3</a>: Short description about resource</li>
+              <li><a href="#">Resource 4</a>: Short description about resource</li>
+            </ul>
+            <p>Still have a question? <a href="#">Message your careteam</a> and find out more.</p>
           </div>
         </div>
       </section>
-    </div>
-    <div class="footer">
-      <div class="small-12 columns">
-        <p>Copyright 2013-2014 Vitamin C</p>
-      </div>
     </div>
   </div>
 </div>
