@@ -104,7 +104,18 @@
 
   <script>
     $(document).foundation();
+<<<<<<< HEAD
   </script>
+=======
+    $(document).ready(function(){
+        var loc = window.location.href;
+        if (/login/.test(loc))
+        {
+            $('body').addClass('login');
+        }
+    });
+    </script>
+>>>>>>> bf9b7ed892df8a6c274db72a17d29cd1ed964ed0
 
 </body>
 </html>
