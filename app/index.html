@@ -31,25 +31,23 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
 
-      <ul class="navigation">
-          <li class="nav-item"><a href="/#/">Home</a></li>
-          <li class="nav-item"><a href="/#/">Portfolio</a></li>
-          <li class="nav-item"><a href="/#/">About</a></li>
-          <li class="nav-item"><a href="/#/">Blog</a></li>
-          <li class="nav-item"><a href="/#/">Contact</a></li>
-      </ul>
-      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-      <label for="nav-trigger"><span>Menu</span></label>
-      <div class="site-wrap">
-          <div ng-view=""></div>
-      </div>
-      <div class="footer text-center">
-          <div class="small-12 columns">
+    <ul class="navigation">
+        <li class="nav-item"><a href="/#/">Home</a></li>
+        <li class="nav-item"><a href="/#/">Portfolio</a></li>
+        <li class="nav-item"><a href="/#/">About</a></li>
+        <li class="nav-item"><a href="/#/">Blog</a></li>
+        <li class="nav-item"><a href="/#/">Contact</a></li>
+    </ul>
+    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+    <label for="nav-trigger"><span>Menu</span></label>
+    <div class="site-wrap">
+        <div ng-view=""></div>
+    </div>
+    <div class="footer text-center">
+        <div class="small-12 columns">
             <p>Copyright 2013-2014 Vitamin C</p>
         </div>
     </div>
-    
-    <div ng-view=""></div>
 
     <paper-toast id="basic-toast"></paper-toast>
 
@@ -106,6 +104,13 @@
 
     <script>
     $(document).foundation();
+    $(document).ready(function(){
+        var loc = window.location.href;
+        if (/login/.test(loc))
+        {
+            $('body').addClass('login');
+        }
+    });
     </script>
 
 </body>

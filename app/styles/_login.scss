@@ -65,3 +65,10 @@
     margin: -200px -200px 400px;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .login {
+    background: #368ee0;
+    background: url('/images/app-bg.jpg') fixed no-repeat center center;
+  }
+}
