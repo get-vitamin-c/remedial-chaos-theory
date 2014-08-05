@@ -15,8 +15,8 @@ body {
 }
 .row {
   background: #fff;
-  padding-bottom: 80px;
   height: 100%;
+  padding-bottom: 80px;
 }
 .logo {
   margin: .5em auto;
@@ -77,23 +77,36 @@ paper-input {
   width: 200px;
   border-top: 1px solid #111;
   border-bottom: 1px solid #000;
-  z-index: 5;
 }
 
-.nav-item a {
+.nav-item a, .nav-section {
   /* non-critical appearance styles */
   display: block;
-  padding: 1em;
   background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
   color: white;
   font-size: 1.2em;
   text-decoration: none;
   transition: color 0.2s, background 0.5s;
 }
-
+.nav-item a {
+  padding: 1em;
+}
+.nav-section, .nav-user {
+  padding: .5em;
+  background: rgba(24, 90, 153, 0.65);
+}
+.nav-user img{
+  border-radius: 50%;
+}
+.nav-name {
+  margin-left: 10px;
+  color: #fff;
+}
 .nav-item a:hover {
-  color: #c74438;
-  background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(75,20,20,0.65) 100%);
+  background: linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(24, 90, 153, 0.65) 100%);
+}
+vc-nav{
+  padding: 3em;
 }
 .site-wrap {
   min-width: 100%;
@@ -125,8 +138,9 @@ label[for="nav-trigger"] {
   height: 30px;
   color: #111;
   cursor: pointer;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect fill='white' width='30' height='6'/><rect fill='white' y='24' width='30' height='6'/><rect fill='white' y='12' width='30' height='6'/></svg>");
   background-size: contain;
+  fill: #fff;
   span {
     top: -5px;
     position: relative;
@@ -150,11 +164,19 @@ label[for="nav-trigger"] {
 }
 .nav-bar {
   height: 60px;
-  z-index: 2;
   width: 100%;
   top: 0;
   position: absolute;
   background: #1a1617;
+}
+.footer {
+  background: #eee;
+  padding: 1em 0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height:80px;
+  position: fixed;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -178,11 +200,14 @@ label[for="nav-trigger"] {
   }
   .site-wrap {
     padding-top: 0;
-    margin-left: 200px;
+    left: 200px;
     box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
   }
-  .site-wrap > * {
-    margin-left: -200px;
+  .ng-scope {
+    padding-right: 200px;
+    &.row{
+      padding-right: 0;
+    }
   }
   .nav-bar {
     display: none;

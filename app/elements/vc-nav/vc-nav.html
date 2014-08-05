@@ -4,13 +4,17 @@
     <style type="text/css">
       .avatar{
         border-radius: 50%;
-        width: 30px;
-        height: 30px;
+        width: 50px;
+        height: 50px;
         margin-right: .5em;
+        float: left;
+        clear: left;
+      }
+      .user-name {
+        color: #fff;
       }
     </style>
-    <link rel="stylesheet" href="/elements/foundation/css/foundation.css" />
-    <div class="text-right"><img src="{{avatar}}" alt="{{user}}" width="30px" height="30px" class="avatar"> {{user}}</div>
+    <div><img src="{{avatar}}" alt="{{user}}" width="50px" height="50px" class="avatar"> <span class="user-name">{{user}}</span></div>
   </template>
   <script>
     Polymer('vc-nav', {
