@@ -40,7 +40,9 @@
   </ul>
   <input type="checkbox" id="nav-trigger" class="nav-trigger" />
   <label for="nav-trigger"><span>Menu</span></label>
+
   <div class="site-wrap">
+    <div class="nav-bar"></div>
     <div ng-view=""></div>
   </div>
   <div class="footer text-center">
@@ -85,6 +87,7 @@
   <script src="bower_components/foundation/js/foundation.js"></script>
   <script src="bower_components/angular-foundation/mm-foundation-tpls.js"></script>
   <script src="bower_components/ngQuickDate/dist/ng-quick-date.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -99,9 +102,9 @@
     <script src="scripts/controllers/careteam.js"></script>
     <script src="scripts/controllers/profile.js"></script>
     <script src="elements/ng-polymer-elements/ng-polymer-elements.js"></script>
+    <script src="scripts/authenticate.js"></script>
   <!-- endbuild -->
 
-  <script src="scripts/authenticate.js"></script>
 
   <script>
     $(document).foundation();
