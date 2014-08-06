@@ -26,7 +26,7 @@
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:400,300' rel='stylesheet' type='text/css'>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
-<body ng-app="remedialChaosTheoryApp">
+<body ng-app="remedialChaosTheoryApp" ng-controller="ApplicationController">
   <!--[if lt IE 7]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
@@ -90,12 +90,15 @@
   <script src="bower_components/angular-foundation/mm-foundation-tpls.js"></script>
   <script src="bower_components/ngQuickDate/dist/ng-quick-date.js"></script>
   <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/floatlabel.js/floatlabels.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/constants.js"></script>
     <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/application.js"></script>
+    <script type="text/javascript" src="scripts/factories/authService.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/login.js"></script>
     <script src="scripts/controllers/history.js"></script>
@@ -111,7 +114,6 @@
   <script>
     $(document).foundation();
     $(document).ready(function() {
-      console.log("Document Ready");
       var loc = window.location.href; // returns the full URL
       if(/login/.test(loc)) {
         $('body').addClass('login');

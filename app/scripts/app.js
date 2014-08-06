@@ -19,36 +19,54 @@
   'ngQuickDate',
   'ng-polymer-elements'
   ])
-  .config(function ($routeProvider, $locationProvider, ngQuickDateDefaultsProvider) {
+  .config(function ($routeProvider, $locationProvider, ngQuickDateDefaultsProvider, USER_ROLES) {
 
   $routeProvider
   .when('/login', {
-    templateUrl: 'login.html',
+    templateUrl: 'views/login.html',
     controller: 'LoginCtrl'
   })
   .when('/', {
     templateUrl: 'views/main.html',
-    controller: 'MainCtrl'
+    controller: 'MainCtrl',
+    data: {
+      authorizedRoles: USER_ROLES.all
+    }
   })
   .when('/history', {
     templateUrl: 'views/history.html',
-    controller: 'HistoryCtrl'
+    controller: 'HistoryCtrl',
+    data: {
+      authorizedRoles: USER_ROLES.all
+    }
   })
   .when('/tracktion', {
     templateUrl: 'views/tracktion.html',
-    controller: 'TracktionCtrl'
+    controller: 'TracktionCtrl',
+    data: {
+      authorizedRoles: USER_ROLES.all
+    }
   })
   .when('/news', {
     templateUrl: 'views/news.html',
-    controller: 'NewsCtrl'
+    controller: 'NewsCtrl',
+    data: {
+      authorizedRoles: USER_ROLES.all
+    }
   })
   .when('/careteam', {
     templateUrl: 'views/careteam.html',
-    controller: 'CareteamCtrl'
+    controller: 'CareteamCtrl',
+    data: {
+      authorizedRoles: USER_ROLES.all
+    }
   })
   .when('/profile', {
     templateUrl: 'views/profile.html',
-    controller: 'ProfileCtrl'
+    controller: 'ProfileCtrl',
+    data: {
+      authorizedRoles: USER_ROLES.all
+    }
   })
   .otherwise({
     redirectTo: '/login'
@@ -79,4 +97,15 @@
     }
   });
 
-});
+})
+.constant('USER_ROLES', {
+  all: '*'
+})
+.constant('AUTH_EVENTS', {
+  loginSuccess: 'auth-login-success',
+  loginFailed: 'auth-login-failed',
+  logoutSuccess: 'auth-logout-success',
+  sessionTimeout: 'auth-session-timeout',
+  notAuthenticated: 'auth-not-authenticated',
+  notAuthorized: 'auth-not-authorized'
+})

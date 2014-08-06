@@ -50,6 +50,19 @@
       color: #555;
     }
   }
+  input {
+    border: 1px solid #494949;
+    padding: 1rem !important;
+    outline: 0;
+    color: #494949;
+    font-size: 14px;
+    width: 100%
+  }
+  label.label-floatlabel {
+    font-weight: bold;
+    font-size: 11px;
+    margin-bottom: .5em;
+  }
 }
 .login__form paper-button {
   width: 7em;
