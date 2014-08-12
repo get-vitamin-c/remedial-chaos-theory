@@ -3,7 +3,7 @@
   <div class="wrapper">
     <h1>Vitamin <img src="/images/logo-big.png" alt=""></h1>
     <div class="login-body">
-      <form name="login-form" class="login__form" ng-submit="login(credentials)">
+      <form name="login-form" class="login__form" ng-submit="login(credentials)" method="post">
         <h2>Patient Sign In</h2>
         <input type="text" id="username" placeholder="Email" ng-model="credentials.username" class="floatlabel">
         <input type="password" id="password" placeholder="Password" ng-model="credentials.password" class="floatlabel">

@@ -4,11 +4,10 @@ angular.module('remedialChaosTheoryApp')
 
     authService.login = function (credentials) {
       console.log(credentials)
-      // var loginUrl = endpointUrl + '&username=' + credentials.username + '&password=' credentials.password;
-      return $http
-        .post(endpointUrl + '&username=' + credentials.username + '&password=' credentials.password)
+      // var loginUrl = "" + endpointUrl + '&username=' + credentials.username + '&password=' credentials.password;
+      return $http({method: 'POST', url: 'http://localhost:3000/oauth/token?grant_type=password&client_id=' + clientId + '&client_secret=' + clientSecret + "&username=" + credentials.username + "&password=" + credentials.password})
         .then(function (res) {
-          Session.create(res.id, res.user.id, res.user.role);
+          console.log(res)
           return res.user;
         });
     };
