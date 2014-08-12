@@ -201,13 +201,18 @@ label[for="nav-trigger"] {
   .site-wrap {
     padding-top: 0;
     left: 200px;
-    box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
   }
   .ng-scope {
     padding-right: 200px;
     &.row{
       padding-right: 0;
     }
+  }
+  #login {
+    left: -50px;
+  }
+  .content {
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
   }
   .nav-bar {
     display: none;

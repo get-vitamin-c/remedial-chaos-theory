@@ -15,8 +15,7 @@ angular.module('remedialChaosTheoryApp')
       }
     ]);
   })
-  .factory('AuthInterceptor', function ($rootScope, $q,
-                                        AUTH_EVENTS) {
+  .factory('AuthInterceptor', function ($rootScope, $q, AUTH_EVENTS) {
     return {
       responseError: function (response) {
         $rootScope.$broadcast({

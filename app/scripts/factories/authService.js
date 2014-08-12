@@ -3,8 +3,10 @@ angular.module('remedialChaosTheoryApp')
     var authService = {};
 
     authService.login = function (credentials) {
+      console.log(credentials)
+      // var loginUrl = endpointUrl + '&username=' + credentials.username + '&password=' credentials.password;
       return $http
-        .post('/login', credentials)
+        .post(endpointUrl + '&username=' + credentials.username + '&password=' credentials.password)
         .then(function (res) {
           Session.create(res.id, res.user.id, res.user.role);
           return res.user;
